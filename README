@@ -1,0 +1,13 @@
+PEAR Package Autoloader
+
+This was a simple experiment to try out the PEAR2 Pyrus API, and see how easy
+it would be to install PEAR packages on the fly.
+
+The default channel is pear2, but that can easily be modified by changing
+the classToPackage method.
+
+This is pretty dangerous of course, but a fun experiment none-the-less.
+http://saltybeagle.com/2009/11/autoloader-that-installs-pear-packages/
+
+@author Brett Bieber <brett.bieber@gmail.com>
+@license New BSD
