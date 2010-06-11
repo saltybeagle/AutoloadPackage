@@ -53,15 +53,15 @@ class AutoloadPackage
      */
     static function installPackage($package)
     {
-        $config = \pear2\Pyrus\Config::singleton(self::$autoload_registry);
+        $config = \PEAR2\Pyrus\Config::singleton(self::$autoload_registry);
         $config->preferred_state = 'alpha';
-        $p = new \pear2\Pyrus\Package($package);
+        $p = new \PEAR2\Pyrus\Package($package);
         try {
-            \pear2\Pyrus\Installer::begin();
-            \pear2\Pyrus\Installer::prepare($p);
-            \pear2\Pyrus\Installer::commit();
+            \PEAR2\Pyrus\Installer::begin();
+            \PEAR2\Pyrus\Installer::prepare($p);
+            \PEAR2\Pyrus\Installer::commit();
         } catch (Exception $e) {
-            \pear2\Pyrus\Installer::rollback();
+            \PEAR2\Pyrus\Installer::rollback();
             echo $e;
         }
     }
@@ -82,7 +82,7 @@ class AutoloadPackage
     /**
      * Guess a package name from a class name.
      *
-     * @param string $class Class name, eg: pear2\Templates\Savant\Main
+     * @param string $class Class name, eg: PEAR2\Templates\Savant\Main
      *
      * @return string The best guess at a package name. eg: PEAR2_Templates_Savant
      */
